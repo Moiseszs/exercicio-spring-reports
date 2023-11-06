@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class Connector {
 
 	public static Connection connect() throws ClassNotFoundException, SQLException{
-		String url = "jdbc:jtds:sqlserver://localhost:1433/db_exercicio_udf001";
+		String url = "jdbc:jtds:sqlserver://localhost:1433/BdExercicioRelatorios";
 		Class.forName("net.sourceforge.jtds.jdbc.Driver");
-		Connection connection = DriverManager.getConnection(url);
+		Connection connection = DriverManager.getConnection(url, "dbuser", "pass");
 		return connection;
 	}
 }
